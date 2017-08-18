@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="reset.css" rel="stylesheet">
+<link href="tab.css" rel="stylesheet">
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="tab.js"></script>
+
+</head>
+<body>
+    <div class="js-tab tab" data-config='{            
+                                            "triggerType" : "click",
+                                            "effect" : "fade",
+                                            "invoke" : 2,
+                                            "auto" : 3000
+                                        }'>
+    	<ul class="tab-nav">
+    		<li class="actived"><a href="javascript:void(0);">新闻</a></li>
+    		<li><a href="#">娱乐</a></li>
+    		<li><a href="#">电影</a></li>
+    		<li><a href="#">科技</a></li>
+    	</ul> 
+        <div class="content-wrap">
+            <div class="content-item current"><img src="image/a.jpg"></div>
+            <div class="content-item"><img src="image/b.jpg"></div>
+            <div class="content-item"><img src="image/c.jpg"></div>
+            <div class="content-item"><img src="image/d.jpg"></div>
+        </div>   	
+    </div>
+    <script>
+    $(function () {
+        //tab
+        var tab = new Tab($(".js-tab").eq(0)); 
+    });
+    </script>
+</body>
+</html>
